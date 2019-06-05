@@ -340,10 +340,101 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-        </section>
+            <div class="row" >
+                <a class="col-md-12 col-12 btn btn-primary" id="toSkills3" href="#skills3">ادامه</a>
+            </div>
+    </section>
+            <section id="skills3" class="page" style="display: none">
+                    <h2>مهارت ها</h2>
+                    <hr>
+                <div>
+                    <h3>لینوکس</h3>
+                    <div class="row">
+                        <span class="col-4">LPIC-1</span>
+                        <div class="col-8 levels">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="radio" id="lpic1-1-id" name="lpic1-1" value="1"/><label for="lpic1-1-id">مبتدی</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="lpic1-2-id" name="lpic1-2" value="2"/><label for="lpic1-2-id">متوسط</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="lpic1-3-id" name="lpic1-3" value="3"/><label for="lpic1-3-id">حرفه ای</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="col-4">LPIC-2</span>
+                        <div class="col-8 levels">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="radio" id="lpic2-1-id" name="lpic2-1" value="1"/><label for="lpic2-1-id">مبتدی</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="lpic2-2-id" name="lpic2-2" value="2"/><label for="lpic2-2-id">متوسط</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="lpic2-3-id" name="lpic2-3" value="3"/><label for="lpic2-3-id">حرفه ای</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>میکروکنترلرها</h3>
+                    <div class="row">
+                        <span class="col-4">AVR</span>
+                        <div class="col-8 levels">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="radio" id="avr-1-id" name="avr-1" value="1"/><label for="avr-1-id">مبتدی</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="avr-2-id" name="avr-2" value="2"/><label for="avr-2-id">متوسط</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="avr-3-id" name="avr-3" value="3"/><label for="avr-3-id">حرفه ای</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="col-4">ARM-Raspberry pi</span>
+                        <div class="col-8 levels">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="radio" id="armRasp-1-id" name="armRasp-1" value="1"/><label for="armRasp-1-id">مبتدی</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="armRasp-2-id" name="armRasp-2" value="2"/><label for="armRasp-2-id">متوسط</label>
+                                </div>
+                                <div class="col-3">
+                                    <input type="radio" id="armRasp-3-id" name="armRasp-3" value="3"/><label for="armRasp-3-id">حرفه ای</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <span class="col-4">ARM-Cortex M3</span>
+                            <div class="col-8 levels">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <input type="radio" id="armCortex-1-id" name="armCortex-1" value="1"/><label for="armCortex-1-id">مبتدی</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" id="armCortex-2-id" name="armCortex-2" value="2"/><label for="armCortex-2-id">متوسط</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="radio" id="armCortex-3-id" name="armCortex-3" value="3"/><label for="armCortex-3-id">حرفه ای</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="Js/bootstrap.min.js"></script>
@@ -371,6 +462,10 @@
           $("#toSkills2").click(function(){
             $("#skills").fadeOut();
             $("#skills2").delay(500).fadeIn();
+          });
+          $("#toSkills3").click(function(){
+            $("#skills2").fadeOut();
+            $("#skills3").delay(500).fadeIn();
           });
         });
     </script>
