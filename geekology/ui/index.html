@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+
+<html lang="fa" dir="rtl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>گیکولوژی|انجمن علمی مهندسی کامپیوتر دانشگاه اراک</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/Style.css" />
+</head>
+<body>
+    <form>
+        <section id="intro" class="page" style="display: none">
+            <img class="logo" src="Images/logo.png" alt="انجمن علمی کامپیوتر دانشگاه اراک" width="300px" height="300px"/>
+            <h1>انجمن علمی کامپیوتر دانشگاه اراک</h1>
+            <h2>سامانه بانک اطلاعاتی گروه کامپیوتر</h2>
+            <a id="start" href="#" class="btn btn-primary">شروع</a>
+        </section>
+
+        <section id="personal" class="page" style="display: none">
+            <h2>اطلاعات فردی</h2>
+            <hr>
+            <div class="row" >
+                <div class="col-md-8 col-12">
+                    <label for="name">نام و نام خانوادگی</label>
+                    <input class="form-control" type="text" name="name" id="name" />
+                </div>
+                <div class="col-md-2 col-6">
+                    <label for="gender">جنسیت</label>
+                    <select class="form-control"name="gender" id="gender">
+                        <option value="0">آقا</option>
+                        <option value="1">خانم</option>
+                    </select>
+                </div>
+                <div class="col-md-2 col-6">
+                    <label for="birthyear">سال تولد</label>
+                    <input class="form-control" type="number" name="birthyear" id="birthyear" />
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-4 col-12">
+                    <label for="stdno">شماره دانشجویی</label>
+                    <input class="form-control" type="number" name="stdno" id="stdno" />
+                </div>
+                <div class="col-md-4 col-12">
+                    <label for="enteryear">سال ورود</label>
+                    <input class="form-control" type="number" name="enteryear" id="enteryear" />
+                </div>
+                <div class="col-md-4 col-12">
+                    <label for="grade">مقطع تحصیلی</label>
+                    <select class="form-control"name="gender" id="gender">
+                        <option value="0">کارشناسی</option>
+                        <option value="1">کارشناسی ارشد</option>
+                        <option value="1">دکتری</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-4 col-12">
+                    <label for="email">پست الکترونیک</label>
+                    <input class="form-control" type="email" name="email" id="email" />
+                </div>
+                <div class="col-md-4 col-12">
+                    <label for="siteurl">آدرس سایت شخصی</label>
+                    <input class="form-control" type="text" name="siteurl" id="siteurl" />
+                </div>
+                <div class="col-md-4 col-12">
+                    <label for="phonenumber">شماره تلفن همراه</label>
+                    <input class="form-control" type="number" name="phonenumber" id="phonenumber" />
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-6 col-12">
+                    <label for="telegram">آی دی تلگرام</label>
+                    <input class="form-control" type="text" name="telegram" id="telegram" />
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="instagram">آدرس پیج اینستاگرام</label>
+                    <input class="form-control" type="text" name="instagram" id="instagram" />
+                </div>
+            </div>
+            <div class="row" >
+                <a class="col-md-12 col-12 btn btn-primary" id="toSkills" href="#talents">ادامه</a>
+            </div>
+        </section>
+
+        <section id="skills" class="page" style="display: none">
+            <h2>مهارت ها</h2>
+            <hr>
+            <div>
+                <h3>زبان های برنامه نویسی</h3>
+                <div class="row">
+                    <span class="col-4">Python</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="python-1" name="python" value="1"/><label for="python-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="python-2" name="python" value="2"/><label for="python-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="python-3" name="python" value="3"/><label for="python-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">Java</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="java-1" name="java" value="1"/><label for="java-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="java-2" name="java" value="2"/><label for="java-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="java-3" name="java" value="3"/><label for="java-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">C#</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="csharp-1" name="csharp" value="1"/><label for="csharp-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="csharp-2" name="csharp" value="2"/><label for="csharp-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="csharp-3" name="csharp" value="3"/><label for="csharp-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="col-4">C++</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="cpp-1" name="cpp" value="1"/><label for="cpp-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="cpp-2" name="cpp" value="2"/><label for="cpp-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="cpp-3" name="cpp" value="3"/><label for="cpp-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>طراحی صفحات وب</h3>
+                <div class="row">
+                    <span class="col-4">HTML</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="html-1" name="html" value="1"/><label for="html-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="html-2" name="html" value="2"/><label for="html-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="html-3" name="html" value="3"/><label for="html-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">CSS</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="css-1" name="css" value="1"/><label for="css-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="css-2" name="css" value="2"/><label for="css-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="css-3" name="css" value="3"/><label for="css-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">Javascript</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="js-1" name="js" value="1"/><label for="js-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="js-2" name="js" value="2"/><label for="js-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="js-3" name="js" value="3"/><label for="js-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="skills-2" class="page" style="display: block">
+            <h2>مهارت ها</h2>
+            <hr>
+            <div>
+                <h3>گرافیک</h3>
+                <div class="row">
+                    <span class="col-4">Adobe Photoshop</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="photoshop-1" name="photoshop" value="1"/><label for="photoshop-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="photoshop-2" name="photoshop" value="2"/><label for="photoshop-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="photoshop-3" name="photoshop" value="3"/><label for="photoshop-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">CorelDraw</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="corel-1" name="corel" value="1"/><label for="corel-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="corel-2" name="corel" value="2"/><label for="corel-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="corel-3" name="corel" value="3"/><label for="corel-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">Adobe Illustrator</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="illustrator-1" name="illustrator" value="1"/><label for="illustrator-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="illustrator-2" name="illustrator" value="2"/><label for="illustrator-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="illustrator-3" name="illustrator" value="3"/><label for="illustrator-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="col-4">Adobe Indesign</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="indesign-1" name="indesign" value="1"/><label for="indesign-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="indesign-2" name="indesign" value="2"/><label for="indesign-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="indesign-3" name="indesign" value="3"/><label for="indesign-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>طراحی صفحات وب</h3>
+                <div class="row">
+                    <span class="col-4">HTML</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="html-1" name="html" value="1"/><label for="html-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="html-2" name="html" value="2"/><label for="html-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="html-3" name="html" value="3"/><label for="html-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">CSS</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="css-1" name="css" value="1"/><label for="css-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="css-2" name="css" value="2"/><label for="css-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="css-3" name="css" value="3"/><label for="css-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-4">Javascript</span>
+                    <div class="col-8 levels">
+                        <div class="row">
+                            <div class="col-3">
+                                <input type="radio" id="js-1" name="js" value="1"/><label for="js-1">مبتدی</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="js-2" name="js" value="2"/><label for="js-2">متوسط</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="radio" id="js-3" name="js" value="3"/><label for="js-3">حرفه ای</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input[type='radio']").click(function(){
+                var previousValue = $(this).data('storedValue');
+                if (previousValue) {
+                    $(this).prop('checked', !previousValue);
+                    $(this).data('storedValue', !previousValue);
+                } 
+                else{
+                    $(this).data('storedValue', true);
+                    $("input[type=radio]:not(:checked)").data("storedValue", false);
+                }
+            })
+          $("#start").click(function(){
+            $("#intro").fadeOut();
+            $("#personal").delay(500).fadeIn();
+          });
+          $("#toSkills").click(function(){
+            $("#personal").fadeOut();
+            $("#skills").delay(500).fadeIn();
+          });
+        });
+    </script>
+</body>
+</html>

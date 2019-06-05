@@ -1,0 +1,99 @@
+﻿@font-face {
+    font-family: "Sahel";
+    src: url("../fonts/sahel/Sahel-FD.ttf") format("ttf"), 
+         url("../fonts/sahel/Sahel-FD.eot") format("eot"), 
+         url("../fonts/sahel/Sahel-FD.woff") format("woff"), 
+         url("../fonts/sahel/Sahel-FD.woff2") format("woff2");
+    font-weight:100;
+}
+@font-face {
+    font-family: "Sahel";
+    src: url("../fonts/sahel/Sahel-Bold-FD.ttf") format("ttf"), 
+         url("../fonts/sahel/Sahel-Bold-FD.eot") format("eot"), 
+         url("../fonts/sahel/Sahel-Bold-FD.woff") format("woff"), 
+         url("../fonts/sahel/Sahel-Bold-FD.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Sahel";
+    src: url("../fonts/sahel/Sahel-Black-FD.ttf") format("ttf"),
+         url("../fonts/sahel/Sahel-Black-FD.eot") format("eot"),
+         url("../fonts/sahel/Sahel-Black-FD.woff") format("woff"),
+         url("../fonts/sahel/Sahel-Black-FD.woff2") format("woff2");
+    font-weight: 900;
+}
+@media (max-width : 480px){
+    .page {
+        width: 90% !important;
+    }
+}
+body, html {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    font-family: "Sahel";
+    direction: rtl;
+    background-color: #fefefe;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+}
+h1 {
+    text-shadow: -2px 2px 0 #A9A9A9;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Sahel";
+}
+h3,h4,h5,h6 {
+    font-weight: lighter;
+}
+.page {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+label {
+    margin: 0;
+}
+form .row {
+    margin: 10px initial;
+}
+.form-control {
+    text-align: center;
+}
+.levels div[class*="col-"]{
+    margin:0;
+    padding:0;
+}
+.levels input[type="radio"] {
+    -moz-appearance:  none;
+}
+.levels input[type="radio"] + label {
+    background-color: #fafafa !important;
+    width: 100%;
+    position: relative;
+    font-weight: lighter;
+    font-size: 10pt;
+    padding: 5px;
+}
+.levels input[type="radio"] + label::after {
+    content: " ";
+    position: absolute;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    right: 0;
+}
+.levels input[type="radio"]:checked + label {
+    color : #007bff;
+}
+.levels input[type="radio"]:checked + label::after {
+    background-color: #007bff;
+}
