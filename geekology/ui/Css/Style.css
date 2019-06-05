@@ -23,7 +23,7 @@
     font-weight: 900;
 }
 @media (max-width : 480px){
-    .page {
+    #applicationForm {
         width: 90% !important;
     }
 }
@@ -41,6 +41,10 @@ body, html {
     align-items: center;
     flex-flow: wrap;
 }
+#applicationForm {
+    width: 50%;
+    margin: 0 auto;
+}
 h1 {
     text-shadow: -2px 2px 0 #A9A9A9;
 }
@@ -52,8 +56,6 @@ h3,h4,h5,h6 {
 }
 .page {
     text-align: center;
-    width: 50%;
-    margin: 0 auto;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -61,8 +63,8 @@ input[type="number"] {
 label {
     margin: 0;
 }
-form .row {
-    margin: 10px initial;
+.page .row {
+    margin: 10px auto;
 }
 .form-control {
     text-align: center;

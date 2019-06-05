@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="Css/Style.css" />
 </head>
 <body>
-    <form>
-        <section id="intro" class="page" style="display: none">
+    <form id="applicationForm">
+        <section id="intro" class="page">
             <img class="logo" src="Images/logo.png" alt="انجمن علمی کامپیوتر دانشگاه اراک" width="300px" height="300px"/>
             <h1>انجمن علمی کامپیوتر دانشگاه اراک</h1>
             <h2>سامانه بانک اطلاعاتی گروه کامپیوتر</h2>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="row" >
-                <a class="col-md-12 col-12 btn btn-primary" id="toSkills" href="#talents">ادامه</a>
+                <a class="col-md-12 col-12 btn btn-primary" id="toSkills" href="#skills">ادامه</a>
             </div>
         </section>
 
@@ -208,11 +208,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="row" >
+                    <a class="col-md-12 col-12 btn btn-primary" id="toSkills2" href="#skills2">ادامه</a>
+                </div>
             </div>
 
         </section>
 
-        <section id="skills-2" class="page" style="display: block">
+        <section id="skills2" class="page" style="display: none">
             <h2>مهارت ها</h2>
             <hr>
             <div>
@@ -363,6 +366,10 @@
           $("#toSkills").click(function(){
             $("#personal").fadeOut();
             $("#skills").delay(500).fadeIn();
+          });
+          $("#toSkills2").click(function(){
+            $("#skills").fadeOut();
+            $("#skills2").delay(500).fadeIn();
           });
         });
     </script>
