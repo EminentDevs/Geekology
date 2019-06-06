@@ -6,27 +6,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>گیکولوژی|انجمن علمی مهندسی کامپیوتر دانشگاه اراک</title>
-    <link rel="stylesheet" href="{% static "Css/bootstrap.min.css" %}" />
-    <link rel="stylesheet" href="{% static "Css/Style.css" %}" />
+    <link rel="stylesheet" href="{% static "web/css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "web/css/Style.css" %}" />
 </head>
 <body>
     <form id="applicationForm">
         <section id="intro" class="page">
-            <img class="logo" src="{% static "Images/logo.png" %}" alt="انجمن علمی کامپیوتر دانشگاه اراک" width="300px" height="300px"/>
+            <img class="logo" src="{% static "web/images/logo.png" %}" alt="انجمن علمی کامپیوتر دانشگاه اراک" width="300px" height="300px"/>
             <h1>انجمن علمی کامپیوتر دانشگاه اراک</h1>
             <h2>سامانه بانک اطلاعاتی گروه کامپیوتر</h2>
             <a id="start" href="#personal" class="btn btn-primary continue">شروع</a>
         </section>
 
-        {% include 'personalInfo.html' %}
+        {% include 'web/personalInfo.html' %}
 
-        {% include 'skill.html' %}
+        {% include 'web/skill.html' %}
         
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="{% static "Js/bootstrap.min.js" %}"></script>
+    <script src="{% static "web/js/bootstrap.min.js" %}"></script>
     
-    {% include 'indexScripts.html' %}
+    {% include 'web/indexScripts.html' %}
 
 </body>
 </html>
