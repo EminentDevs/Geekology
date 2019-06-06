@@ -1,0 +1,45 @@
+<script>
+    var pages = [
+        "intro","personal","skills","skills2","skills3","skills4","skills5"
+    ];
+    i=0;
+    (function(window, location) {
+        history.replaceState(null, document.title, location.pathname+"#"+pages[i]);
+        history.pushState(null, document.title, location.pathname);
+
+        window.addEventListener("popstate", function() {
+            if(location.hash !== "#"+pages[i]) {
+                    history.replaceState(null, document.title, location.pathname);
+                    setTimeout(function(){
+                        if (i>0){
+                            $("#" + pages[i]).fadeOut();
+                            $("#" + pages[i-1]).delay(500).fadeIn();
+                            i--;
+                        }
+
+                    },0);
+            }
+        }, false);
+    }(window, location));
+    function changePage(){
+        $("#" + pages[i]).fadeOut();
+        $("#" + pages[i+1]).delay(500).fadeIn();
+        i++;
+    }
+    $(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var previousValue = $(this).data('storedValue');
+            if (previousValue) {
+                $(this).prop('checked', !previousValue);
+                $(this).data('storedValue', !previousValue);
+            } 
+            else{
+                $(this).data('storedValue', true);
+                $("input[type=radio]:not(:checked)").data("storedValue", false);
+            }
+        })
+      $(".continue").click(function(){
+        changePage()
+      });
+    });
+</script>
