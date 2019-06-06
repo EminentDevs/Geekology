@@ -69,12 +69,15 @@ label {
 .form-control {
     text-align: center;
 }
+.levels > .row {
+    margin: 0;
+}
 .levels div[class*="col-"]{
     margin:0;
     padding:0;
 }
 .levels input[type="radio"] {
-    -moz-appearance:  none;
+    display:  none;
 }
 .levels input[type="radio"] + label {
     background-color: #fafafa !important;
