@@ -1,5 +1,5 @@
+{% load webExtras %}
 {% for itemLabel in skillLabel %}
-    {% set loop = skillLoop %}
     <section id={{itemLabel.labelName}} class="page">
         <h2>مهارت ها</h2>
         <div class="pagination">
@@ -30,6 +30,9 @@
                 {% endif %}
             {% endfor %}
         </div>
-    </section>  
+    </section>
+    {% with i='0' %}
+    <p>{{ skillLabel|indexTwoList:i}}</p>
+    {% endwith %}
 {% endfor %}
 <button type="submit" class="btn btn-success">ثبت اطلاعات</button>
