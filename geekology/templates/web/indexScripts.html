@@ -26,6 +26,36 @@
         $("#" + pages[i+1]).delay(500).fadeIn();
         i++;
     }
+    function emptyPersonalInfoHandle()
+    {
+        $('#nameId').blur(function()
+        {
+            if(!$(this).val()){
+                $(this).css('box-shadow','3px 3px 1px red');
+            }
+            else{
+                $(this).css('box-shadow','');
+            }
+        });
+        $('#stdnoId').blur(function()
+        {
+            if(!$(this).val()){
+                $(this).css('box-shadow','3px 3px 1px red');
+            }
+            else{
+                $(this).css('box-shadow','');
+            }
+        });
+        $('#phonenumberId').blur(function()
+        {
+            if(!$(this).val()){
+                $(this).css('box-shadow','3px 3px 1px red');
+            }
+            else{
+                $(this).css('box-shadow','');
+            }
+        });
+    }
     $(document).ready(function(){
         $("input[type='radio']").click(function(){
             var previousValue = $(this).data('storedValue');
@@ -39,6 +69,7 @@
             }
         })
       $(".continue").click(function(){
+        emptyPersonalInfoHandle()
         changePage()
       });
     });
