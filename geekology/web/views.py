@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Student,Skill,StudentSkill
+from .models import Student,Skill,StudentSkill,Label
 
 # Create your views here.
 
@@ -42,4 +42,10 @@ def index(request):
         else:
             return render(request,'web/index.html')
     else:
-        return render(request,'web/index.html')
+        skill = Skill.objects.all()
+        skillLabel = Label.objects.all()
+        context = {
+            'skill' : skill,
+            'skillLabel' : skillLabel
+        }
+        return render(request,'web/index.html',context=context)
