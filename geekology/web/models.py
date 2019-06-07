@@ -11,18 +11,16 @@ class CustomBooleanField(models.BooleanField):
 
 class Student(models.Model):
     studentName = models.CharField(max_length=100)
-    male = CustomBooleanField()
-
-    # value="12/23/2008"
-    birthdayDate = models.DateField()
+    male = CustomBooleanField(null=True)
+    birthdayDate = models.CharField(max_length=4,null=True)
     studentNumber = models.CharField(max_length=15)
-    enterYear = models.CharField(max_length=4)
-    gender = models.CharField(max_length=1)
-    email = models.EmailField(max_length=50)
-    pWebUrl = models.URLField(max_length=50)
+    enterYear = models.CharField(max_length=4,null=True)
+    gender = models.CharField(max_length=1,null=True)
+    email = models.EmailField(max_length=50,null=True)
+    pWebUrl = models.URLField(max_length=50,null=True)
     phoneNumber = models.CharField(max_length=11)
-    telegram = models.CharField(max_length=20)
-    instagram = models.CharField(max_length=20)
+    telegram = models.CharField(max_length=20,null=True)
+    instagram = models.CharField(max_length=20,null=True)
 
     def __str__(self):
         return '{} - {}'.format(self.studentName,self.studentNumber)
@@ -33,8 +31,8 @@ class Skill(models.Model):
         return '{}'.format(self.skillName)
 
 class StudentSkill(models.Model):
-    stdudent = models.ForeignKey(Student,on_delete=models.CASCADE)
+    student = models.ForeignKey(Student,on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill,on_delete=models.CASCADE)
     level = models.CharField(max_length=1,default='0')
     def __str__(self):
-        return '{} - {} - {}'.format(self.stdudent,self.skill,self.level)
+        return '{} - {} - {}'.format(self.student,self.skill,self.level)
