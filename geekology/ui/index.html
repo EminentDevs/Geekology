@@ -19,6 +19,10 @@
 
         <section id="personal" class="page" style="display: none">
             <h2>اطلاعات فردی</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul id="navigation"></ul>
+            </div>
             <hr>
             <div class="row" >
                 <div class="col-md-8 col-12">
@@ -86,6 +90,10 @@
 
         <section id="skills" class="page" style="display: none">
             <h2>مهارت ها</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul class="navigation"></ul>
+            </div>
             <hr>
             <div>
                 <h3>زبان های برنامه نویسی</h3>
@@ -217,6 +225,10 @@
 
         <section id="skills2" class="page" style="display: none">
             <h2>مهارت ها</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul id="navigation"></ul>
+            </div>
             <hr>
             <div>
                 <h3>طراحی صفحات وب</h3>
@@ -331,6 +343,10 @@
         </section>
         <section id="skills3" class="page" style="display: none">
             <h2>مهارت ها</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul id="navigation"></ul>
+            </div>
             <hr>
             <div>
                 <h3>گرافیک</h3>
@@ -463,6 +479,10 @@
         
         <section id="skills4" class="page" style="display: none">
             <h2>مهارت ها</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul id="navigation"></ul>
+            </div>
             <hr>
             <div>
                 <h3>لینوکس</h3>
@@ -560,6 +580,10 @@
 
         <section id="skills5" class="page" style="display: none">
             <h2>مهارت ها</h2>
+            <div class="pagination">
+                <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
+                <ul id="navigation"></ul>
+            </div>
             <hr>
             <div>
                 <h3>شبکه</h3>
@@ -746,7 +770,14 @@
                 }
             })
           $(".continue").click(function(){
-            changePage()
+            changePage();
+            if(i>0){
+                $("#navigation").empty();
+                for (j=0; j<i;j++){
+                    title = $("#"+pages[j] + " > h2").text();
+                    $("#"+pages[i] +" .navigation").append("<li><a href='#"+pages[j] + "'>" + title + "</a></li>");
+                }
+            }
           });
         });
     </script>

@@ -3,6 +3,7 @@
         "intro","personal","skills","skills2","skills3","skills4","skills5"
     ];
     i=0;
+    error = 0;
     (function(window, location) {
         history.replaceState(null, document.title, location.pathname+"#"+pages[i]);
         history.pushState(null, document.title, location.pathname);
@@ -15,44 +16,38 @@
                             $("#" + pages[i]).fadeOut();
                             $("#" + pages[i-1]).delay(500).fadeIn();
                             i--;
+                            retrieveNavigation();
                         }
 
                     },0);
             }
         }, false);
     }(window, location));
+    function retrieveNavigation(){
+        if(i>1){
+            $("#"+pages[i] +" .navigation").empty();
+            for (j=1; j<i;j++){
+                title = $("#"+pages[j] + " > h2").text();
+                $("#"+pages[i] +" .navigation").append("<li><a href='#"+pages[j] + "'>" + title + "</a></li>");
+            }
+        }
+    }
     function changePage(){
         $("#" + pages[i]).fadeOut();
         $("#" + pages[i+1]).delay(500).fadeIn();
         i++;
+        retrieveNavigation();
     }
     function emptyPersonalInfoHandle()
-    {
-        $('#nameId').blur(function()
-        {
+    {   
+        error = 0;
+        $('.errorCheck').each(function(){
             if(!$(this).val()){
-                $(this).css('box-shadow','3px 3px 1px red');
+               $(this).addClass("errorInput");
+                error++;
             }
             else{
-                $(this).css('box-shadow','');
-            }
-        });
-        $('#stdnoId').blur(function()
-        {
-            if(!$(this).val()){
-                $(this).css('box-shadow','3px 3px 1px red');
-            }
-            else{
-                $(this).css('box-shadow','');
-            }
-        });
-        $('#phonenumberId').blur(function()
-        {
-            if(!$(this).val()){
-                $(this).css('box-shadow','3px 3px 1px red');
-            }
-            else{
-                $(this).css('box-shadow','');
+                $(this).removeClass("errorInput");
             }
         });
     }
@@ -68,8 +63,14 @@
                 $("input[type=radio]:not(:checked)").data("storedValue", false);
             }
         })
-      $(".continue").click(function(){
-        emptyPersonalInfoHandle()
+      $(".continue").click(function(e){
+        if(i==1){
+            emptyPersonalInfoHandle();
+            if (error) {
+                e.preventDefault();
+                return;
+            }
+        }
         changePage()
       });
     });

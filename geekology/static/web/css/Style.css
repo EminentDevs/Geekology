@@ -1,4 +1,5 @@
-﻿@font-face {
+﻿@import "fontawesome.min.css";
+@font-face {
     font-family: "Sahel";
     src: url("../fonts/sahel/Sahel-FD.ttf") format("ttf"), 
          url("../fonts/sahel/Sahel-FD.eot") format("eot"), 
@@ -56,6 +57,25 @@ h3,h4,h5,h6 {
 }
 .page {
     text-align: center;
+    position: relative;
+}
+.pagination {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.navigation {
+    list-style: none;
+    position: absolute;
+    background: #f9f9f9;
+    padding: 0;
+    right: 35px;
+    width: 170px;
+}
+.back {
+    font-size: 2.5rem;
+    display: flex;
+    text-decoration: none !important;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -101,4 +121,15 @@ label {
 }
 .levels input[type="radio"]:checked + label::after {
     background-color: #007bff;
+}
+.errorInput{
+    border-color:#80bdff;
+    outline:0;
+    box-shadow:0 0 0 .2rem rgba(255,0,0,.25);
+}
+.items .row {
+    margin: 10px auto;
+}
+.items .item-title {
+    align-self: center;
 }
