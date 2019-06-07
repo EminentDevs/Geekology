@@ -9,6 +9,11 @@ class CustomBooleanField(models.BooleanField):
 
 # Create your models here.
 
+class Label(models.Model):
+    labelName = models.CharField(max_length=30)
+    def __str__(self):
+        return self.labelName
+
 class Student(models.Model):
     studentName = models.CharField(max_length=100)
     male = CustomBooleanField(null=True)
@@ -27,8 +32,9 @@ class Student(models.Model):
 
 class Skill(models.Model):
     skillName = models.CharField(max_length=40)
+    categorylabel = models.ForeignKey(Label,on_delete=models.CASCADE,null=True)
     def __str__(self):
-        return '{}'.format(self.skillName)
+        return '{}-{}'.format(self.skillName,self.categorylabel)
 
 class StudentSkill(models.Model):
     student = models.ForeignKey(Student,on_delete=models.CASCADE)
