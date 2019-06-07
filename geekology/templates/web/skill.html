@@ -30,9 +30,11 @@
                 {% endif %}
             {% endfor %}
         </div>
+    {% if skillLabel|indexTwoList:forloop.counter0 %}
+    <div class="row" >
+            <a class="col-md-12 col-12 btn btn-primary continue" href="#{{skillLabel|indexTwoList:forloop.counter0}}">ادامه</a>
+        </div>
+    {% endif %}
     </section>
-    {% with i='0' %}
-    <p>{{ skillLabel|indexTwoList:i}}</p>
-    {% endwith %}
 {% endfor %}
 <button type="submit" class="btn btn-success">ثبت اطلاعات</button>

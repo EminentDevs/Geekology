@@ -4,4 +4,8 @@ register = template.Library()
 
 @register.filter
 def indexTwoList(value,arg):
-    return value[int(arg)]
+    print(arg)
+    if arg == len(value)-1:
+        return ''
+    else:
+        return value[arg+1]
