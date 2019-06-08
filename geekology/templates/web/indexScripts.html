@@ -1,7 +1,9 @@
+{% load webExtras %}
 <script>
-    var pages = [
-        "intro","personal","skills","skills2","skills3","skills4","skills5"
-    ];
+    var initialPage = ["intro","personal"];
+    var skillCategory = ['graphic', 'multimedia', 'linux', 'microcontroller', 'network', 'generalSkill', 'webBackEnd', 'webFrontEnd', 'mobileProgramming', 'programmingLanguage'];
+    var pages = initialPage.concat(skillCategory)
+    
     i=0;
     error = 0;
     (function(window, location) {

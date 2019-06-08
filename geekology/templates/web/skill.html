@@ -1,7 +1,7 @@
 {% load webExtras %}
 {% for itemLabel in skillLabel %}
-    <section id={{itemLabel.labelName}} class="page">
-        <h2>مهارت ها</h2>
+    <section id={{itemLabel.labelName}} class="page" style="display: none">
+        <h2>{{itemLabel.labelName|add:" Skill"}}</h2>
         <div class="pagination">
             <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
             <ul class="navigation"></ul>
@@ -37,4 +37,3 @@
     {% endif %}
     </section>
 {% endfor %}
-<button type="submit" class="btn btn-success">ثبت اطلاعات</button>
