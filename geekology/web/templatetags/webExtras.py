@@ -14,6 +14,13 @@ def listFirstElement(value):
     return value[0]
 
 @register.filter
+def listElementIndex(value,arg):
+    if value[len(value)-1] == arg:
+        return True
+    else:
+        return False
+
+@register.filter
 def listElementSkillLabel(value):
     valueList = []
     for item in value:
