@@ -38,9 +38,21 @@ def index(request):
                 for item in Skill.objects.all():
                     studentSkill = StudentSkill(student=student,skill=item,level=request.POST.get(item.skillName,'0'))
                     studentSkill.save()
-                return render(request,'web/index.html')
+                skill = Skill.objects.all()
+                skillLabel = Label.objects.all()
+                context = {
+                    'skill' : skill,
+                    'skillLabel' : skillLabel
+                }
+                return render(request,'web/index.html',context=context)
         else:
-            return render(request,'web/index.html')
+            skill = Skill.objects.all()
+            skillLabel = Label.objects.all()
+            context = {
+                'skill' : skill,
+                'skillLabel' : skillLabel
+            }
+            return render(request,'web/index.html',context=context)
     else:
         skill = Skill.objects.all()
         skillLabel = Label.objects.all()
