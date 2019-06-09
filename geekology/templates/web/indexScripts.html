@@ -1,7 +1,7 @@
 {% load webExtras %}
 <script>
     var initialPage = ["intro","personal"];
-    var skillCategory = ['graphic', 'multimedia', 'linux', 'microcontroller', 'network', 'generalSkill', 'webBackEnd', 'webFrontEnd', 'mobileProgramming', 'programmingLanguage'];
+    var skillCategory = {{ skillLabel|listElementSkillLabel|safe }};
     var pages = initialPage.concat(skillCategory)
     
     i=0;
