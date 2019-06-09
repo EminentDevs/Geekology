@@ -14,7 +14,7 @@ def index(request):
                 skill = Skill.objects.all()
                 skillLabel = Label.objects.all()
                 context = {
-                    'message':'اطلاعات دانشجو با مشخصات وارد شده ثبت شده است',
+                    'message':'اطلاعات وارد شده قبلا ثبت شده است',
                     'skill' : skill,
                     'skillLabel' : skillLabel
                 }
