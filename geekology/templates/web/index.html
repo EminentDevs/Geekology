@@ -17,6 +17,18 @@
             <h1>انجمن علمی کامپیوتر دانشگاه اراک</h1>
             <h2>سامانه بانک اطلاعاتی گروه کامپیوتر</h2>
             <a id="start" href="#personal" class="btn btn-primary continue">شروع</a>
+            {% if message %}
+            <div class="alert alert-warning alertCustom" role="alert">
+                {{message}}
+            </div>
+            {% endif %}
+            {% if stdno and name %}
+            <div class="alert alert-success alertCustom" role="alert">
+                دانشجوی محترم : {{name}}<br>
+                با شماره دانشجویی : {{stdno}}<br>
+                اطلاعات شما ما موفقیت ثبت شد.
+            </div>
+            {% endif %}
         </section>
 
         {% include 'web/personalInfo.html' %}

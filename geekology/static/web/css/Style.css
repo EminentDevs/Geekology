@@ -133,3 +133,6 @@ label {
 .items .item-title {
     align-self: center;
 }
+.alertCustom{
+    margin-top: 10px;
+}

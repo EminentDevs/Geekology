@@ -11,7 +11,14 @@ def index(request):
         if request.POST['name'] != '' and request.POST['stdno'] != '' and request.POST['phonenumber'] != '':
             sStdno = request.POST['stdno']
             if Student.objects.filter(studentNumber=sStdno).exists():
-                return render(request,'web/index.html')
+                skill = Skill.objects.all()
+                skillLabel = Label.objects.all()
+                context = {
+                    'message':'اطلاعات دانشجو با مشخصات وارد شده ثبت شده است',
+                    'skill' : skill,
+                    'skillLabel' : skillLabel
+                }
+                return render(request,'web/index.html',context=context)
             else:
                 sName = request.POST['name']
                 sSexuality = request.POST['sexuality']
@@ -42,7 +49,9 @@ def index(request):
                 skillLabel = Label.objects.all()
                 context = {
                     'skill' : skill,
-                    'skillLabel' : skillLabel
+                    'skillLabel' : skillLabel,
+                    'stdno' : sStdno,
+                    'name' : sName
                 }
                 return render(request,'web/index.html',context=context)
         else:
@@ -50,7 +59,8 @@ def index(request):
             skillLabel = Label.objects.all()
             context = {
                 'skill' : skill,
-                'skillLabel' : skillLabel
+                'skillLabel' : skillLabel,
+                'message':'مشخصات خود را به صورت کامل وارد نمایید'
             }
             return render(request,'web/index.html',context=context)
     else:
