@@ -54,32 +54,38 @@
         });
         $('.yearError').each(function(){
             var regex = /^\d{4}$/g
-            if(!$(this).val().match(regex)){
-               $(this).addClass("errorInput");
-                error++;
-            }
-            else{
-                $(this).removeClass("errorInput");
+            if ($(this).val()) {
+              if(!$(this).val().match(regex)){
+                 $(this).addClass("errorInput");
+                  error++;
+              }
+              else{
+                  $(this).removeClass("errorInput");
+              }
             }
         });
         $('.stdnoClass').each(function(){
             var regex = /^\d{10}$/g
-            if(!$(this).val().match(regex)){
-               $(this).addClass("errorInput");
-                error++;
-            }
-            else{
-                $(this).removeClass("errorInput");
+            if ($(this).val()) {
+              if(!$(this).val().match(regex)){
+                 $(this).addClass("errorInput");
+                  error++;
+              }
+              else{
+                  $(this).removeClass("errorInput");
+              }
             }
         });
         $('.phoneError').each(function(){
             var regex = /^09\d{9}$/g
-            if(!$(this).val().match(regex)){
-               $(this).addClass("errorInput");
-                error++;
-            }
-            else{
-                $(this).removeClass("errorInput");
+            if ($(this).val()) {
+              if(!$(this).val().match(regex)){
+                 $(this).addClass("errorInput");
+                  error++;
+              }
+              else{
+                  $(this).removeClass("errorInput");
+              }  
             }
         });
     }
