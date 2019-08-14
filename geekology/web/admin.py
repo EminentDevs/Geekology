@@ -19,5 +19,5 @@ class StudentSkillAdmin(admin.ModelAdmin):
 
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
-    list_display = ['id','labelName']
+    list_display = ['id','labelName','persianTrans']
     search_fields = ['labelName']

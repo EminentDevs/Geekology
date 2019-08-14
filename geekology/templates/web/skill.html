@@ -1,13 +1,12 @@
 {% load webExtras %}
 {% for itemLabel in skillLabel %}
     <section id={{itemLabel.labelName}} class="page" style="display: none">
-        <h2>{{itemLabel.labelName|add:" Skill"}}</h2>
+        <h2>{{itemLabel.persianTrans}}</h2>
         <div class="pagination">
             <a class="back" href="#"><i class="fas fa-angle-right"></i></a>
             <!--<ul class="navigation"></ul>-->
         </div>
         <hr>
-        <h3>{{itemLabel.labelName}}</h3>
         <div class="item">
             {% for itemSkill in skill %}
                 {% if itemSkill.categorylabel.labelName ==  itemLabel.labelName  %}

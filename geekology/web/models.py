@@ -11,6 +11,7 @@ class CustomBooleanField(models.BooleanField):
 
 class Label(models.Model):
     labelName = models.CharField(max_length=30)
+    persianTrans = models.CharField(max_length=50,blank=True)
     def __str__(self):
         return self.labelName
 
