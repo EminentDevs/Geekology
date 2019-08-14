@@ -3,7 +3,7 @@
     var initialPage = ["intro","personal"];
     var skillCategory = {{ skillLabel|listElementSkillLabel|safe }};
     var pages = initialPage.concat(skillCategory)
-    
+
     i=0;
     error = 0;
     (function(window, location) {
@@ -41,7 +41,7 @@
         retrieveNavigation();
     }
     function emptyPersonalInfoHandle()
-    {   
+    {
         error = 0;
         $('.errorCheck').each(function(){
             if(!$(this).val()){
@@ -52,10 +52,40 @@
                 $(this).removeClass("errorInput");
             }
         });
+        $('.yearError').each(function(){
+            var regex = /^\d{4}$/g
+            if(!$(this).val().match(regex)){
+               $(this).addClass("errorInput");
+                error++;
+            }
+            else{
+                $(this).removeClass("errorInput");
+            }
+        });
+        $('.stdnoClass').each(function(){
+            var regex = /^\d{10}$/g
+            if(!$(this).val().match(regex)){
+               $(this).addClass("errorInput");
+                error++;
+            }
+            else{
+                $(this).removeClass("errorInput");
+            }
+        });
+        $('.phoneError').each(function(){
+            var regex = /^09\d{9}$/g
+            if(!$(this).val().match(regex)){
+               $(this).addClass("errorInput");
+                error++;
+            }
+            else{
+                $(this).removeClass("errorInput");
+            }
+        });
     }
     $(document).ready(function(){
         $('form').bind("keypress", function(e) {
-            if (e.keyCode == 13) {               
+            if (e.keyCode == 13) {
                 e.preventDefault();
                 $("#"+ pages[i]+ " .continue").click();
                 return false;
@@ -66,7 +96,7 @@
             if (previousValue) {
                 $(this).prop('checked', !previousValue);
                 $(this).data('storedValue', !previousValue);
-            } 
+            }
             else{
                 $(this).data('storedValue', true);
                 $("input[type=radio]:not(:checked)").data("storedValue", false);
