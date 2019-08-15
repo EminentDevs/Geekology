@@ -46,33 +46,53 @@
         $('.errorCheck').each(function(){
             if(!$(this).val()){
                $(this).addClass("errorInput");
+               $("#stdnoErrorAlert").addClass("hiddenDiv");
+               $("#phoneErrorAlert").addClass("hiddenDiv");
                 error++;
             }
             else{
                 $(this).removeClass("errorInput");
             }
         });
+        $('.enterYearError').each(function(){
+            var regex = /^\d{4}$/g
+            if ($(this).val()) {
+              if(!$(this).val().match(regex)){
+                 $("#EnterYearErrorAlert").removeClass("hiddenDiv");
+                  error++;
+              }
+              else{
+                  $("#EnterYearErrorAlert").addClass("hiddenDiv");
+              }
+            }
+            else {
+              $("#EnterYearErrorAlert").addClass("hiddenDiv");
+            }
+        });
         $('.yearError').each(function(){
             var regex = /^\d{4}$/g
             if ($(this).val()) {
               if(!$(this).val().match(regex)){
-                 $(this).addClass("errorInput");
+                 $("#yearErrorAlert").removeClass("hiddenDiv");
                   error++;
               }
               else{
-                  $(this).removeClass("errorInput");
+                  $("#yearErrorAlert").addClass("hiddenDiv");
               }
+            }
+            else {
+              $("#yearErrorAlert  ").addClass("hiddenDiv");
             }
         });
         $('.stdnoClass').each(function(){
             var regex = /^\d{10}$/g
             if ($(this).val()) {
               if(!$(this).val().match(regex)){
-                 $(this).addClass("errorInput");
+                 $("#stdnoErrorAlert").removeClass("hiddenDiv");
                   error++;
               }
               else{
-                  $(this).removeClass("errorInput");
+                  $("#stdnoErrorAlert").addClass("hiddenDiv");
               }
             }
         });
@@ -80,12 +100,12 @@
             var regex = /^09\d{9}$/g
             if ($(this).val()) {
               if(!$(this).val().match(regex)){
-                 $(this).addClass("errorInput");
+                 $("#phoneErrorAlert").removeClass("hiddenDiv");
                   error++;
               }
               else{
-                  $(this).removeClass("errorInput");
-              }  
+                  $("#phoneErrorAlert").addClass("hiddenDiv");
+              }
             }
         });
     }
