@@ -40,6 +40,10 @@
         i++;
         retrieveNavigation();
     }
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
     function emptyPersonalInfoHandle()
     {
         error = 0;
@@ -107,6 +111,15 @@
                   $("#phoneErrorAlert").addClass("hiddenDiv");
               }
             }
+        });
+        $('#emailId').each(function(){
+            if (!validateEmail($(this).val())) {
+               $(this).addClass("errorInput");
+                error++;
+              }
+              else{
+                  $(this).removeClass("errorInput");
+              }
         });
     }
     $(document).ready(function(){
