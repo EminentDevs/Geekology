@@ -184,4 +184,11 @@ label.required::after {
   padding: 4px;
   border-radius: 2px;
   font-size: 14px;
+
+}.inputInfo {
+  background-color: gray;
+  color: white;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 12px;
 }
