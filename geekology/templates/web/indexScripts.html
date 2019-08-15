@@ -113,6 +113,7 @@
             }
         });
         $('#emailId').each(function(){
+          if ($(this).val()) {
             if (!validateEmail($(this).val())) {
                $(this).addClass("errorInput");
                 error++;
@@ -120,6 +121,7 @@
               else{
                   $(this).removeClass("errorInput");
               }
+            }
         });
     }
     $(document).ready(function(){
